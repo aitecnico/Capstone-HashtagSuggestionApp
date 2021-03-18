@@ -9,7 +9,7 @@ def connect_db(app):
 
 
 class User(db.Model):
-    """Hashtag."""
+    """User."""
 
     __tablename__ = "users"
 
@@ -17,6 +17,16 @@ class User(db.Model):
     name = db.Column(db.Text, nullable=False)
     email = db.Column(db.Text, nullable=False)
     # password =db.Column() Search about Bcrypt 
+
+
+
+class Hashtag(db.Model):
+    """Hashtag."""
+
+    __tablename__= "hashtags"
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    hashtag = db.Column(db.Text, nullable=False)
 
 # *****************************
 # OUTPUTS JSON
