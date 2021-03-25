@@ -1,26 +1,7 @@
-<!doctype html>
-<html>
+{% extends 'base.html' %}
+{% block title %}Hashtag Suggestion App{% endblock %}
 
-<head>
-  <title>HashtagApp</title>
-  <script src="https://unpkg.com/jquery"></script>
-</head>
+{%block content %}
+<h1>Hashtag Suggestion Home Page</h1>
 
-<body>
-  <form action="/lucky-form" id="lucky-form">
-    <div>Name: <input id="name"> <b id="name-err"></b> </div>
-    <div>Email: <input id="email"> <b id="email-err"></b> </div>
-    <div>Birth Year: <input id="year"> <b id="year-err"></b> </div>
-    <div>Color: <input id="color"> <b id="color-err"></b> </div>
-    <button type='button' onclick="processForm()">Get Hashtags</button>
-  </form>
-
-
-  <div id="lucky-results">Hashtag Results</div>
-
-  <script src="https://unpkg.com/axios/dist/axios.js"></script>
-  <script src="/static/lucky.js"></script>
-
-</body>
-
-</html>
+{% endblock %}

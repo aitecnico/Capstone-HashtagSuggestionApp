@@ -6,9 +6,8 @@ db.create_all()
 
 Hashtag.query.delete()
 
-
-hashtags = [
-    Hashtag(name="William Fayette", email="afflatus@gmail.com")
+users = [
+    User(name="William Fayette", email="afflatus@gmail.com", hashtags="hashtagtest")
 ]
 db.session.add_all(hashtags)
 db.session.commit()
