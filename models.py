@@ -69,12 +69,12 @@ class Hashtag(db.Model):
 # *****************************
 # OUTPUTS JSON
 # *****************************?
-    # def serialize(self):
-    #     return {
-    #         'id': self.id,
-    #         'name': self.name,
-    #         'email': self.email,
-    #     }
+    def serialize(self):
+        return {
+            'id': self.id,
+            'text': self.text,
+            'user_id': self.user_id,
+        }
 
 # *****************************
 

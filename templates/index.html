@@ -1,7 +1,25 @@
 {% extends 'base.html' %}
-{% block title %}Hashtag Suggestion App{% endblock %}
+<!-- {% block title %}Hashtag Suggestion App{% endblock %} -->
 
 {%block content %}
-<h1>Hashtag Suggestion Home Page</h1>
+<!-- <h1>Hashtag Suggestion Index</h1> -->
 
+<h3>Add your text here for hashtag results</h3>
+
+<form action="/hashtagsuggestion">
+    <input type="text" name="hashtag" placeholder="Enter Here">
+    <button>Submit</button>
+    {% if results %}
+    <h3>Hashtag: {{results['hash']}}</h3>
+    <h3>Tweets: {{results['tweets']}}</h3>
+    {% endif %}
+
+
+    <h1>Hashtag List</h1>
+    <ul>
+        {% for hashtag in hashtags %}
+        <li>{{hashtag.text}} - <button class="delete-hashtag" data-id"{{hashtag.id}}">X</button></li>
+        {% endfor %}
+    </ul>
+</form>
 {% endblock %}

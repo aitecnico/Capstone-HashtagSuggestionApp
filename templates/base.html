@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar navbar-light bg-primary justify-content-between">
         <div class="container">
-            <a href="/" class="navbar-brand text-light">Hashtag Suggestion</a>
+            <a href="/" class="navbar-brand text-light">Hashtag Suggestion App</a>
             <ul class="nav navbar-nav flex-row float-right">
                 {% if session['user_id'] %}
                 <li class="nav-item">
@@ -35,8 +35,8 @@
         {% block content %}
         {% endblock %}
     </div>
-    <!-- 
-    <form action="/lucky-form" id="lucky-form">
+
+    <!-- <form action="/lucky-form" id="lucky-form">
         <div>Name: <input id="name"> <b id="name-err"></b> </div>
         <div>Email: <input id="email"> <b id="email-err"></b> </div>
         <div>Birth Year: <input id="year"> <b id="year-err"></b> </div>
@@ -45,11 +45,14 @@
     </form>
 
 
-    <div id="lucky-results">Hashtag Results</div>
+    <div id="lucky-results">Hashtag Results</div> -->
 
-    <script src="https://unpkg.com/axios/dist/axios.js"></script>
-    <script src="/static/lucky.js"></script>
+
+    <!-- <script src="https://unpkg.com/axios/dist/axios.js"></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/static/hashtag.js"></script>
 
 </body>
 
-</html> -->
+</html>

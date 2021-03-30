@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
-<h1>Enter your hashtag</h1>
-<form action="/hashtag/response">
-    <input type="text">
+
+<h3>Enter your text here for hashtag results</h3>
+
+<form action="/hashtagsuggestion">
+    <input type="text" name="hashtag" placeholder="Enter Here">
+    <button>Submit</button>
 </form>
+{% endblock %}

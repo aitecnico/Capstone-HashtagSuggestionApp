@@ -5,21 +5,30 @@ import requests
 
 client_id = '8a385f6168ea69789bee55e54a14ef4fbd19bb662ece'
 
+API_BASE_URL = "https://api.ritekit.com/v1/stats/hashtag-suggestions?text=seo"
+
+app = Flask(__name__)
+
+
+@app.route('/hashtagform')
+def show_hashtag_form():
+    return render_template("hashtag_form.html")
+
 
 
 
 #*******************************
 #GET Hashtag Suggestion for Text
 #*******************************
-res = requests.get("https://api.ritekit.com/v1/stats/hashtag-suggestions?text=seo", 
-                params={'client_id': client_id, 'text': 'Apple', 'limit': 5})
+# res = requests.get("https://api.ritekit.com/v1/stats/hashtag-suggestions?text=seo", 
+#                 params={'client_id': client_id, 'text': 'Apple', 'limit': 5})
 
 
-app = flask(__name__)
+# app = flask(__name__)
 
-@app.route('/')
-def show_hashtag_form():
-    return render_template("hashtag_form.html")
+# @app.route('/')
+# def show_hashtag_form():
+#     return render_template("hashtag_form.html")
 
 # data = res.json()
 
