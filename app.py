@@ -11,7 +11,7 @@ from sqlalchemy.exc import IntegrityError
 # *****************************
 # API_BASE_URL = "http://numbersapi.com/random?"
 
-client_id = '8a385f6168ea69789bee55e54a14ef4fbd19bb662ece'
+client_id = API_SECRET_KEY
 
 API_BASE_URL = "https://api.ritekit.com/v1"
 
