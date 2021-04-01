@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, render_template, request, flash, redirect, session
+# from flask_admin import Admin
 from secrets import API_SECRET_KEY
 from forms import UserForm, LoginForm, HashtagForm
 import requests
@@ -22,6 +23,9 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///hashtag_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = "oh-so-secret"
+# app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
+# admin = Admin(app, name='microblog', template_mode='bootstrap3')
+
 
 connect_db(app)
 
