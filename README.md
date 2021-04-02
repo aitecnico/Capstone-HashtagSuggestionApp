@@ -18,7 +18,7 @@ $ git clone https://github.com/williamthethird/Capstone-HashtagSuggestionApp.git
 $ cd Capstone-HashtagSuggestionApp
 ```
 
-### API Boilerplate
+### API boilerplate
 ```sh
 If you are looking to start a new project from scratch, consider using the Ritekit Trending Hashtag API.
 ```
