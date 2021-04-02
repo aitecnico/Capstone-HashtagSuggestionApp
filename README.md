@@ -34,6 +34,6 @@ $ (venv) pip install -r requirements.txt
 Start the app:
 
 ```sh
-$ flask run
+$ (venv) flask run
 ```
 
