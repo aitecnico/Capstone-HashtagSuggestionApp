@@ -7,6 +7,8 @@
 
 <div align="center" >
 
+<div align="left">
+
 
 ### For developers
 Clone the source locally:
@@ -19,11 +21,11 @@ $ cd Capstone-HashtagSuggestionApp
 Install project dependencies:
 
 ```sh
-$ 
+$ (venv) pip install -r requirements.txt
 ```
 Start the app:
 
 ```sh
-$ 
+$ flask run
 ```
 
