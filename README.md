@@ -3,7 +3,7 @@
 </p>
 <h1 align="center" style="margin-top: 0px;">Hashtag Suggestion App</h1>
 
-<p align="center" >A Simple Web App that retrieves a hashtags currently trending on Twitter</p>
+<p align="center" >A Web App that retrieves a hashtags currently trending on Twitter</p>
 
 <div align="center" >
 
