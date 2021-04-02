@@ -5,10 +5,11 @@
 
 <p align="center" >A Web App that retrieves a hashtag currently trending on Twitter</p>
 
+[![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)
+
 <div align="center" >
-
+ 
 <div align="left">
-
 
 ### For developers
 Clone the source locally:
