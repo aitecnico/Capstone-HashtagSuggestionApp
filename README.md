@@ -16,5 +16,14 @@ $ git clone https://github.com/williamthethird/Capstone-HashtagSuggestionApp.git
 $ cd Capstone-HashtagSuggestionApp
 ```
 
+Install project dependencies:
 
+```sh
+$ 
+```
+Start the app:
+
+```sh
+$ 
+```
 
