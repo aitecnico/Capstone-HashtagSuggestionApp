@@ -21,7 +21,7 @@ $ cd Capstone-HashtagSuggestionApp
 
 ### API boilerplate
 
-If you are looking to start a new project from scratch, consider using the [Ritekit API](https://www.ritekit.com).
+If you are looking to start a new project from scratch, consider using the [Ritekit API](https://ritekit.com/api-demo/trending-hashtags).
 
 
 
