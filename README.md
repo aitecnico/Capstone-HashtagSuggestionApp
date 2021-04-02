@@ -8,3 +8,13 @@
 <div align="center" >
 
 
+### For developers
+Clone the source locally:
+
+```sh
+$ git clone https://github.com/williamthethird/Capstone-HashtagSuggestionApp.git
+$ cd Capstone-HashtagSuggestionApp
+```
+
+
+
