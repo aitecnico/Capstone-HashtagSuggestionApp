@@ -3,7 +3,7 @@
 </p>
 <h1 align="center" style="margin-top: 0px;">Hashtag Suggestion App</h1>
 
-<p align="center" >Cross Platform React Native Material Design Components</p>
+<p align="center" >A Simple Web App that retrieves popular hashtags</p>
 
 <div align="center" >
 
