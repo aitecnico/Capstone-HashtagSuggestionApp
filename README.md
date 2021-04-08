@@ -9,7 +9,7 @@
 
 <div align="center">
 
-Made with Javascript & PostgeSQL
+Made with [Javascript](https://www.javascript.com/) & [PostgeSQL](https://www.postgresql.org/)
  
 <div align="left">
 
