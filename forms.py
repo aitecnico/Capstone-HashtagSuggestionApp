@@ -4,14 +4,14 @@ from wtforms.validators import InputRequired
 
 
 class UserForm(FlaskForm):
-    """Form for adding playlists."""
-
+    """User form"""
+    
     username = StringField('Name', validators= [InputRequired()])
     email = StringField('Email', validators= [InputRequired()])
     password = PasswordField('Password', validators= [InputRequired()])
     
-class LoginForm(FlaskForm):
-    """Login form."""
+class LoginForm(FlaskForm): 
+    """Login form"""
 
     username = StringField('Username', validators=[InputRequired()])
     password = PasswordField('Password', validators=[InputRequired()])

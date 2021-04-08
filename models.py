@@ -66,17 +66,3 @@ class Hashtag(db.Model):
 
     user = db.relationship('User', backref="hashtags")
 
-# *****************************
-# OUTPUTS JSON
-# *****************************?
-    def serialize(self):
-        return {
-            'id': self.id,
-            'text': self.text,
-            'user_id': self.user_id,
-        }
-
-# *****************************
-
-    # def __repr__(self):
-    #     return f"<Hashtag{self.id} name={self.name} email={self.email}>"
