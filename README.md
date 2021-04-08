@@ -6,8 +6,10 @@
 <p align="center" >A Web App that retrieves a hashtag currently trending on Twitter</p>
 
 [![made-for-VSCode](https://img.shields.io/badge/Made%20for-VSCode-1f425f.svg)](https://code.visualstudio.com/)   [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![made-with-Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
 <div align="center">
+Made with Javascript & PostgeSQL
  
 <div align="left">
 
