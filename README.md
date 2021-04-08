@@ -9,10 +9,10 @@
 
 <div align="center">
 
-Made with [Javascript](https://www.javascript.com/) & [PostgeSQL](https://www.postgresql.org/)
  
 <div align="left">
 
+Made with [Javascript](https://www.javascript.com/) & [PostgeSQL](https://www.postgresql.org/)
 
 ### For developers
 Clone the source locally:
