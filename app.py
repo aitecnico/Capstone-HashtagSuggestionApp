@@ -14,7 +14,7 @@ import os
 # PYTHON API REQUEST
 # *****************************
 # client_id = API_SECRET_KEY
-client_id = os.environ.get["API_SECRET_KEY"]
+client_id = os.environ["API_SECRET_KEY"]
 
 API_BASE_URL = "https://api.ritekit.com/v1"
 
