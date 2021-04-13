@@ -32,7 +32,7 @@ API_SECRET_KEY = os.environ.get["API_SECRET_KEY"]
 
 # *******************
 # Connect to Database
-# *******************
+# ******************
 connect_db(app)
 
 

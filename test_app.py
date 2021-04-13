@@ -6,38 +6,37 @@ from unittest import TestCase
 app.config["TESTING"] = True
 app.config["DEBUG_TB_HOSTS"] = ["dont-show-debug-toolbar"]
 
+# ***********************
+# runs once per class
+# ***********************
+# @classmethod
+# def setUpClass(cls):
+#     print("INSIDE SET UP CLASS")
+
+# *********************************************
+# runs BEFORE and end AFTER all test have ran
+# *********************************************
+# @classmethod
+# def tearDownClass(cls):
+#     print("INSIDE TEAR DOWN CLASS")
+
+# ********************************************
+# setUP test runs BEFORE each invidual method
+# ********************************************
+# def setUp(self):
+#     print("INSIDE SET UP")
+
+# ********************************************
+# tearDown test run AFTER each invidual method
+# ********************************************
+# def tearDown(self):
+#     print("INSIDE TEAR DOWN")
+
 
 # ***************************************************************************
 # TEST get request that checks status code 200 and check header in index.html
 # ***************************************************************************
 class HashtagViewsTestCase(TestCase):
-
-    # ***********************
-    # runs once per class
-    # ***********************
-    # @classmethod
-    # def setUpClass(cls):
-    #     print("INSIDE SET UP CLASS")
-
-    # # *********************************************
-    # # runs BEFORE and end AFTER all test have ran
-    # # *********************************************
-    # @classmethod
-    # def tearDownClass(cls):
-    #     print("INSIDE TEAR DOWN CLASS")
-
-    # # ********************************************
-    # # setUP test runs BEFORE each invidual method
-    # # ********************************************
-    # def setUp(self):
-    #     print("INSIDE SET UP")
-
-    # # ********************************************
-    # # tearDown test run AFTER each invidual method
-    # # ********************************************
-    # def tearDown(self):
-    #     print("INSIDE TEAR DOWN")
-
     def test_hashtag_form(self):
         with app.test_client() as client:
             res = client.get("/")
@@ -47,49 +46,36 @@ class HashtagViewsTestCase(TestCase):
             self.assertIn("<h3>Add your text here for hashtag results</h3>", html)
 
     # ***************************************************************************
-    # ?TEST get request that checks status code 200 and check header in index.html
+    # TEST get request that checks status code 200 and check header in index.html
     # ***************************************************************************
-    # def test_hashtag_submit(self):
-    #     with app.test_client() as client:
-    #         res = client.post("/hashtagsuggestion", data={"hashtag": "apple"})
-    #         html = res.get_data(as_text=True)
-    #         self.assertEqual(res.status_code, 200)
-    #         self.assertIn(
-    #             '<h6>class="card-subtitle mb-2 text-muted">Date goes here</h6>', html
-    # )??????
-
     def test_hashtag_submit(self):
         with app.test_client() as client:
-            res = client.post("/hashtagsuggestion", data={"hashtag": "apple"})
+            res = client.get("/hashtagsuggestion?hashtag=apple")
             html = res.get_data(as_text=True)
 
             self.assertEqual(res.status_code, 200)
-            self.assertIn("<h6>You owe $150</h6>", html)
-
-    def test_hashtag(self):
-        sel.assertEqual()
+            self.assertIn("<h3>Hashtag: music</h3>", html)
 
     # *****************************************************
-    # TEST redirect response and getting status code of 302
+    # TEST redirect RESPONSE and getting status code of 302
     # *****************************************************
     def test_redirection(self):
         with app.test_client() as client:
             res = client.get("/logout")
 
             self.assertEqual(res.status_code, 302)
-            self.assertEqual(res.location, "http:localhost/")
+            self.assertEqual(res.location, "http://localhost/")
 
     # ************************************************************************
-    # TEST follow redirect and getting status code of 200 and header from html
+    # TEST redirection FOLLOWED and getting status code of 200 and header from html
     # ************************************************************************
-    # def test_redirection_followed(self):
-    #     with app.test_client() as client:
-    #         res = client.get("/redirect-me", follow_redirects=True)
-    #         html = res.get_data(as_text=True)
+    def test_redirection_followed(self):
+        with app.test_client() as client:
+            res = client.get("/logout", follow_redirects=True)
+            html = res.get_data(as_text=True)
 
-    #         self.assertEqual(res.status_code, 200)
-    #         self.assertIn("<h3>Add your text here for hashtag results</h3>", html)
-    # ???????
+            self.assertEqual(res.status_code, 200)
+            self.assertIn("<h3>Add your text here for hashtag results</h3>", html)
 
     # **********************************
     # TEST session count to set if to 1
