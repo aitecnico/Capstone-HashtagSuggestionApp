@@ -13,20 +13,19 @@ import os
 # *****************************
 # PYTHON API REQUEST
 # *****************************
-client_id = API_SECRET_KEY
+# client_id = API_SECRET_KEY
+client_id = os.environ.get["API_SECRET_KEY"]
 
 API_BASE_URL = "https://api.ritekit.com/v1"
 
 app = Flask(__name__)
 # app.debug = True
 
-
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "hellosecret1")
 app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(
     "DATABASE_URL", "postgresql:///hashtag_db"
 )
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config["SECRET_KEY"]
-API_SECRET_KEY = os.environ.get["API_SECRET_KEY"]
 # toolbar = DebugToolbarExtension(app)
 
 
