@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, render_template, request, flash, redirect, session
-from secrets import API_SECRET_KEY
+
+# from secrets import API_SECRET_KEY
 from forms import UserForm, LoginForm, HashtagForm
 import requests
 import random
@@ -24,7 +25,8 @@ app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get(
     "DATABASE_URL", "postgresql:///hashtag_db"
 )
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "hellosecret1")
+app.config["SECRET_KEY"]
+API_SECRET_KEY = os.environ.get["API_SECRET_KEY"]
 # toolbar = DebugToolbarExtension(app)
 
 
@@ -130,7 +132,7 @@ def login_user():
 # ********************************************************
 @app.route("/logout")
 def logout_user():
-    session.pop("user_id")
+    session.pop("user_id", None)
     flash("Visit us again!", "info")
     return redirect("/")
 
