@@ -5,7 +5,9 @@ import requests
 import random
 from models import db, connect_db, Hashtag, User
 from sqlalchemy.exc import IntegrityError
-from flask_debugtoolbar import DebugToolbarExtension
+import os
+
+# from flask_debugtoolbar import DebugToolbarExtension
 
 # *****************************
 # PYTHON API REQUEST
@@ -15,13 +17,13 @@ client_id = API_SECRET_KEY
 API_BASE_URL = "https://api.ritekit.com/v1"
 
 app = Flask(__name__)
-app.debug = True
+# app.debug = True
 
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql:///hashtag_db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config["SECRET_KEY"] = "oh-so-secret"
-toolbar = DebugToolbarExtension(app)
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "hellosecret1")
+# toolbar = DebugToolbarExtension(app)
 
 
 # *******************
