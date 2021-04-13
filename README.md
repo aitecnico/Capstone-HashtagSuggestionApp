@@ -14,7 +14,7 @@
 
 Made with [Javascript](https://www.javascript.com/) & [PostgeSQL](https://www.postgresql.org/)
 
-![Schema](/schema.jpg)
+![Schema](documentation/schema.jpg)
 
 ### For developers
 Clone the source locally:
