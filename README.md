@@ -16,6 +16,10 @@ Made with [Javascript](https://www.javascript.com/) & [PostgeSQL](https://www.po
 
 ![Schema](documentation/schema.jpg)
 
+### Demo App 
+https://hashtagsuggestion-demo.herokuapp.com/
+
+
 ### For developers
 Clone the source locally:
 
