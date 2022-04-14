@@ -12,7 +12,7 @@
  
 <div align="left">
 
-Made with [Javascript](https://www.javascript.com/) & [PostgeSQL](https://www.postgresql.org/)
+Made with [PostgeSQL](https://www.postgresql.org/)
 
 ![Schema](documentation/schema.jpg)
 
